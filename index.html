@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNB MEDIA | Music Label</title>
+    <!-- 8-bit font for headings and modern monospaced font for text -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base settings and colors */
+        :root {
+            --bg-color: #1a1c23; 
+            --primary-orange: #ff7300; 
+            --dark-orange: #cc5c00;
+            --text-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: 'Space Mono', monospace; 
+            line-height: 1.6;
+            background-image: radial-gradient(circle at center, #252833 0%, #13141a 100%);
+            min-height: 100vh;
+        }
+
+        /* 8-bit font class */
+        .pixel-font {
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-orange);
+            background: rgba(26, 28, 35, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo-text {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            min-height: 80vh;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(255, 115, 0, 0.3);
+            border: 4px solid var(--primary-orange);
+            animation: pulse 2s infinite;
+        }
+
+        .hero h1 {
+            color: var(--primary-orange);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 0px #000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            color: #aaa;
+            letter-spacing: 1px;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            color: var(--primary-orange);
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px dashed var(--primary-orange);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border: 1px solid rgba(255, 115, 0, 0.3);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        .content-box p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            border-top: 2px solid var(--primary-orange);
+            margin-top: 50px;
+        }
+
+        /* Logo pulse animation (beat sync effect) */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(255, 115, 0, 0.2); }
+            50% { box-shadow: 0 0 50px rgba(255, 115, 0, 0.6); }
+            100% { box-shadow: 0 0 20px rgba(255, 115, 0, 0.2); }
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.2rem; }
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .hero-image { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text pixel-font">DNB MEDIA</div>
+        <nav>
+            <a href="#about">ABOUT</a>
+            <a href="#bio">HISTORY</a>
+            <a href="#contacts">CONTACTS</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Ensure your image is named logo.jpg and is in the same folder -->
+            <img src="DDNB MEDIA.jpg" alt="DNB MEDIA Logo" class="hero-image">
+            <h1 class="pixel-font">DNB MEDIA</h1>
+            <p>KAZAKHSTANI MUSIC LABEL. RHYTHM. BASS. FUTURE.</p>
+        </section>
+
+        <div class="container">
+            <section id="about">
+                <h2 class="section-title pixel-font">ABOUT THE LABEL</h2>
+                <div class="content-box">
+                    <p><span class="highlight">DNB MEDIA</span> is more than just a record label; it is the true epicenter of a new sound in Kazakhstan. We specialize in promoting high-quality electronic and bass music, uniting those who live by the rhythm.</p>
+                    <p>Our mission is to build a powerful, independent platform for local talent, opening up new horizons in the industry. We break stereotypes and prove that the local scene can deliver a world-class sound, tearing up dancefloors and sound systems alike.</p>
+                </div>
+            </section>
+
+            <section id="bio">
+                <h2 class="section-title pixel-font">OUR HISTORY</h2>
+                <div class="content-box">
+                    <p>The foundation of the label was laid in <span class="highlight">2022</span>. At the helm of DNB MEDIA stands an ambitious musician and visionary — <span class="highlight">Zhainak Ai Sultan Rinatuly</span>, widely known in the electronic music scene by his stage name <span class="pixel-font highlight" style="font-size: 0.9rem;">ISEEQ</span>.</p>
+                    <p>Starting his journey with a deep, genuine love for music and breakbeat culture, iseeq realized that the Kazakhstani scene lacked a unified center of gravity. That's how the idea of DNB MEDIA was born. In a short amount of time, the label evolved from a bold concept into a fully operational machine generating heavy bass and tight beats, bringing the founder's unique vision to the masses.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contacts">
+        <p class="pixel-font" style="font-size: 0.8rem; color: var(--primary-orange); margin-bottom: 10px;">DNB MEDIA © 2022 - 2024</p>
+        <p>Founder: Zhainak Ai Sultan Rinatuly (iseeq)</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">Kazakhstan</p>
+    </footer>
+
+</body>
+</html>
